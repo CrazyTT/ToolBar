@@ -1,16 +1,23 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/file" android:title="编辑" app:showAsAction="ifRoom"
-          android:icon="@drawable/abc_ic_menu_share_mtrl_alpha">
-        <menu>
-            <item android:id="@+id/action_edit" android:title="编辑"></item>
-            <item android:id="@+id/action_share" android:title="分享"></item>
-        </menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:title="分享"
+        app:showAsAction="ifRoom">
     </item>
-    <item android:id="@+id/chioce" android:title="更多" app:showAsAction="ifRoom"
-          android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha">
+    <item
+        android:id="@+id/chioce"
+        android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:title="更多"
+        app:showAsAction="ifRoom">
         <menu>
-            <item android:id="@+id/action_settings" android:title="设置"></item>
-            <item android:id="@+id/action_logout" android:title="登出"></item>
+            <item
+                android:id="@+id/action_about"
+                android:title="关于"></item>
+            <item
+                android:id="@+id/action_logout"
+                android:title="登出"></item>
         </menu>
     </item>
 </menu>

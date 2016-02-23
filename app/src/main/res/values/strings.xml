@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">TooBar</string>
+    <string name="app_name">android开发技术交流群</string>
     <string name="hello_world">Hello world!</string>
+    <string name="copyright">Copyright © 2016 crazy_petter.</string>
+    <string name="no_wechat">还没有安装微信</string>
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="string_share_weixin_title">陈柳柳的android开发技术交流群，快快扩散开，快快分享</string>
+    <string name="string_share_weixin_content">群号:64288703,群主相当可爱，群里HR超级多哈！点我下载app，就能关注我哟。</string>
+    <string name="shareUrl">http://fir.im/crazyandroid</string>
+    <string name="aboutme">我的android技术交流群：64288703\n欢迎大家前来交流探讨</string>
 </resources>

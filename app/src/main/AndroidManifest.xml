@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chenliuliu.toobar.test" >
+<manifest
+    package="com.chenliuliu.toobar.test"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <uses-sdk android:minSdkVersion="4"></uses-sdk>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ab_android"
+        android:icon="@drawable/launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+        <meta-data android:value="56ca9e4be0f55a82a70014d0" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="chenliuliu" android:name="UMENG_CHANNEL"/>
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".activitys.MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".activitys.AboutActivity">
         </activity>
     </application>
 
