@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.chenliuliu.toobar.test"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.chenliuliu.toobar.test"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-sdk android:minSdkVersion="4"/>
 
-    <uses-sdk android:minSdkVersion="4"></uses-sdk>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <meta-data android:value="56ca9e4be0f55a82a70014d0" android:name="UMENG_APPKEY"></meta-data>
-        <meta-data android:value="chenliuliu" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56ca9e4be0f55a82a70014d0"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="chenliuliu"/>
+
         <activity
             android:name=".activitys.MainActivity"
             android:label="@string/app_name">
@@ -28,6 +34,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activitys.AboutActivity">
+        </activity>
+        <activity android:name=".activitys.HallActivity">
         </activity>
     </application>
 

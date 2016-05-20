@@ -2,13 +2,13 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_share"
-        android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:icon="@drawable/ab_share"
         android:title="分享"
         app:showAsAction="ifRoom">
     </item>
     <item
         android:id="@+id/chioce"
-        android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:icon="@drawable/abc_ic_menu_overflow_material"
         android:title="更多"
         app:showAsAction="ifRoom">
         <menu>

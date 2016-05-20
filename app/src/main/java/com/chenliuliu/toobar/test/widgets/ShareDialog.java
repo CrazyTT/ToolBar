@@ -30,17 +30,12 @@ public class ShareDialog extends Dialog {
         setContentView(R.layout.layout_share_dialog);
         mTxtWeixin = (TextView) findViewById(R.id.txt_weixin);
         mTxtTimeLine = (TextView) findViewById(R.id.txt_time_line);
-
-
         mTxtWeixin = (TextView) findViewById(R.id.txt_weixin);
         mTxtTimeLine = (TextView) findViewById(R.id.txt_time_line);
-
         if (!isShare) {
             mTxtWeixin.setText("微信");
             mTxtTimeLine.setText("朋友圈");
         }
-
-
         findViewById(R.id.btn_cancle).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +60,6 @@ public class ShareDialog extends Dialog {
 
     public interface ShareDialogCallBack {
         void shareTowexin();
-
         void shareToTime();
     }
 }

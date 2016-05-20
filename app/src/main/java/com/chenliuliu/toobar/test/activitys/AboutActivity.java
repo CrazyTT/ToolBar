@@ -22,7 +22,7 @@ public class AboutActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
         //屏蔽系统的title
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        toolbar.setNavigationIcon(R.drawable.left_arrow);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,8 +30,7 @@ public class AboutActivity extends ActionBarActivity {
             }
         });
         tvVersion = (TextView) findViewById(R.id.txt_version);
-        tvVersion.setText("当前版本为:" + getCurrentVersion());
-
+        tvVersion.setText(getString(R.string.currentversion) + getCurrentVersion());
     }
 
     public void onResume() {

@@ -11,16 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.chenliuliu.toobar.test.R;
 import com.chenliuliu.toobar.test.widgets.BrowserLayout;
 import com.chenliuliu.toobar.test.widgets.ShareDialog;
+import com.chenliuliu.toobar.test.widgets.LeftDialog;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.umeng.analytics.MobclickAgent;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     BrowserLayout mBrowser;
 
     @Override
@@ -36,7 +36,17 @@ public class MainActivity extends ActionBarActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "我是陈柳柳", Toast.LENGTH_SHORT).show();
+                LeftDialog shareDialog = new LeftDialog(MainActivity.this, R.style.leftDialog);
+                Window w = shareDialog.getWindow();
+                WindowManager.LayoutParams lp = w.getAttributes();
+                lp.y = 0;
+                final int cMakeBottom = -1000;
+                lp.x = cMakeBottom;
+                lp.gravity = Gravity.LEFT;
+                shareDialog.onWindowAttributesChanged(lp);
+                shareDialog.setCanceledOnTouchOutside(true);
+                shareDialog.show();
+
             }
         });
         toolbar.setOnMenuItemClickListener(onMenuItemClick);
@@ -56,6 +66,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
         mBrowser.loadUrl("http://weibo.com/u/2097805097");
+        findViewById(R.id.btn_more).setOnClickListener(this);
     }
 
     private Toolbar.OnMenuItemClickListener onMenuItemClick = new Toolbar.OnMenuItemClickListener() {
@@ -119,5 +130,16 @@ public class MainActivity extends ActionBarActivity {
         home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         home.addCategory(Intent.CATEGORY_HOME);
         startActivity(home);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_more:
+                Intent intent = new Intent(MainActivity.this, HallActivity.class);
+                startActivity(intent);
+                break;
+        }
+
     }
 }

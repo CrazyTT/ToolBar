@@ -11,4 +11,5 @@
     <string name="string_share_weixin_content">群号:64288703,群主相当可爱，群里HR超级多哈！点我下载app，就能关注我哟。</string>
     <string name="shareUrl">http://fir.im/crazyandroid</string>
     <string name="aboutme">我的android技术交流群：64288703\n欢迎大家前来交流探讨</string>
+    <string name="currentversion">当前版本为:</string>
 </resources>

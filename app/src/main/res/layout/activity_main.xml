@@ -27,9 +27,23 @@
         app:ms_background_color="#ffffff"
         app:ms_text_color="#000000"/>
 
-    <com.chenliuliu.toobar.test.widgets.BrowserLayout
-        android:id="@+id/brower"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1">
+
+        <com.chenliuliu.toobar.test.widgets.BrowserLayout
+            android:id="@+id/brower"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"/>
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/ic_more"/>
+    </FrameLayout>
 </LinearLayout>
